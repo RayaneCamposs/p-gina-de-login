@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+
+        <img class="image_flor" src="imagem/planta.png" alt="" width="50%" height="100%">
+        <div class="thebox">
+            <h1> Login</h1>
+        <hr>
+        <div class="boxone">
+            <input type="text" class="mytext" placeholder="Telefone, nome de usuário ou email.">
+        </div>
+
+        <div class="boxone">
+            <input type="password" class="mytext" placeholder="Senha">
+        </div>
+
+        <div class="link">
+            <button>Entrar</button>
+        </div>
+
+       <div id="quebra">
+           <hr>
+           <p>Entrar com:</p>
+       </div>
+
+       <div class="logo">
+           <img src="imagem/logo google.png" alt="" width="5%" height="5%">
+           <img src="imagem/face logo.png" alt=""  width="5%" height="5%">
+       </div>
+
+       <div class="link">
+          <button>Esqueceu a senha?</button>
+       </div>
+
+       <div class="conta">
+           <hr>
+           <p>Não tem uma conta? <a href=""> Cadastre-se</a></p>
+       </div>
+
+        </div>
+    </main>
+
+    <script>
+        function pisca (elemento) {
+    const textoArray = elemento.innerHTML.split(''); /* o innerHTML pegou todos os elementos do meu H1. o split divide o texto em cada parte que tem espaço.  / */
+    elemento.innerHTML = "";
+    textoArray.forEach((letra, i) => {
+       setTimeout(function() { /* setTimeout, com ele é possivel dizer o tempo que ele vai adicionar o intem  */
+           elemento.innerHTML += letra;
+       },130 * i
+       )
+    });
+}
+const titulo = document.querySelector('h1');
+pisca (titulo);
+    </script>
+
+</body>
+</html>
